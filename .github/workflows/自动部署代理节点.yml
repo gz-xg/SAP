@@ -73,10 +73,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-      # 2️⃣ 设置 Node.js 24
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
