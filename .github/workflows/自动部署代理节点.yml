@@ -73,9 +73,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
+     # 1️⃣ Checkout 仓库
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+     # 2️⃣ 设置 Node.js 24
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
           node-version: '24'
 
     - name: Install CF CLI
@@ -354,4 +359,3 @@ jobs:
         else
           echo "⚠️ 未找到应用路由，请检查部署状态。"
         fi
-
